@@ -1,0 +1,153 @@
+@font-face {
+    font-family: "textMeOne";
+    src: url("../assets/fonts/Text_Me_One/TextMeOne-Regular.ttf");
+}
+@font-face {
+    font-family: "technocrat";
+    src: url("../assets/fonts/Technocrat-Regular.ttf");
+}
+
+/* Heading */
+#header {
+    display: relative;
+}
+
+.top-container {
+    margin-bottom: 240px;
+}
+    /* Upper-Left Circle */
+    .circle-container {
+        /* width: 600px; */
+        /* height: 460px; */
+        display: inline-block;
+    }
+        @keyframes rotation {
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        @keyframes counterRotation {
+            100% {
+                transform: rotate(-360deg);
+            }
+        }
+
+        .innerCircle {
+            position: absolute;
+            /* width: 180px; */
+            transition: transform 2s;
+            top: 13px;
+            animation: rotation 2s linear infinite;
+        }
+
+        .middleCircle {
+            position: absolute;
+            /* width: 280px; */
+            transition: transform 2s;
+            top: -43px;
+            left: -65px;
+            /* animation: counterRotation 2s linear infinite; */
+        }
+
+        .outerCircle {
+            position: absolute;
+            /* width: 400px; */
+            transition: transform 2s;
+            top: -135px;
+            left: -145px;
+        }
+
+        .circle-container:hover {
+            .middleCircle {
+                transform: translate(70px, 45px) rotate(360deg);
+            }
+            .outerCircle {
+                transform: translate(150px, 117px) rotate(360deg);
+            }
+
+        }
+    
+    /* Title */
+    .title-text {
+        padding-right: 100px;
+        margin-bottom: 100px;
+    }
+        h1 {
+            font-family: 'technocrat';
+            font-size: 9rem;
+            text-transform: uppercase;
+            color: #009bc2;
+        }
+
+        h2 {
+            font-family: 'textMeOne';
+            color: #009bc2;
+            font-weight: normal;
+            font-size: 3rem;
+        }
+
+        .pro {
+            text-decoration: underline;
+        }
+
+    .epath {
+        position: absolute;
+        top: -200px;
+        right: 2px;
+        width: 400px;
+    }
+
+    .mist {
+        position: absolute;
+        top: 450px;
+        width: 700px;
+        left: -100px;
+    }
+
+    .clines {
+        position: relative;
+        width: 400px;
+        right: -50%;
+        /* animation: rotation 2s linear infinite; */
+    }
+
+/* ------ */
+@media (max-width: 1000px) {
+    .top-container {
+        margin-bottom: 50px;
+    }
+
+    .clines {
+        position: relative;
+        width: 300px;
+        right: -65%;
+        /* animation: rotation 2s linear infinite; */
+    }
+    .mist {
+        position: absolute;
+        top: 545px;
+        width: 600px;
+        left: -100px;
+    }
+    .epath-mid {
+        position: absolute;
+        top: -200px;
+        right: 1000px;
+        width: 400px;
+        height: 700px;
+    }
+
+    .title-text {
+        padding-right: 100px;
+    }
+
+    h1 {
+        font-size: 4rem;
+        margin-bottom: 100px;
+    }
+
+    h2 {
+        font-size: 3rem;
+    }
+}
